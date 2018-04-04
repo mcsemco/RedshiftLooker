@@ -94,6 +94,11 @@ view: fact_tb_dtp_req_line_1 {
   dimension: hcp_full_name {
     type: string
     sql: ${TABLE}.hcp_full_name ;;
+    link: {
+      label: "RedirectTest Page "
+      url: "http://10.10.2.34:8084/Home/RedirectTest"
+      icon_url: "https://www.google.com/s2/favicons?domain=www.looker.com"
+    }
   }
 
   dimension: hcp_last_name {
