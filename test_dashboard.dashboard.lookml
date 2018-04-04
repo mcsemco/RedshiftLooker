@@ -1,5 +1,5 @@
-- dashboard: qpharma_dashboard
-  title: Qpharma Dashboard
+- dashboard: test_dashboard
+  title: Test Dashboard
   layout: newspaper
   embed_style:
     background_color: "#f6f8fa"
@@ -262,7 +262,7 @@
       num_rows: '10'
     label_rotation: -90
     hidden_fields: []
-    x_axis_datetime_label: ''
+    x_axis_datetime_label: "%Y-%m"
     listen:
 
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
