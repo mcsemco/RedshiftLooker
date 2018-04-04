@@ -203,7 +203,7 @@
     - dim_status.status
     sorts:
     - fact_tb_dtp_req_line_1.count_products desc 0
-    - date.yearmo
+    - fact_tb_dtp_req_line_1.request_date
     limit: 500
     stacking: ''
     show_value_labels: true
