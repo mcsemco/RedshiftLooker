@@ -224,6 +224,7 @@ view: fact_tb_dtp_req_line_1 {
 
   dimension: row_id {
     type: string
+    primary_key: yes
     sql: ${TABLE}.row_id ;;
   }
 
