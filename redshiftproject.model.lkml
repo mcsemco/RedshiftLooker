@@ -1,5 +1,5 @@
 connection: "dwhredshift"
-label: "QPHARMA Test Model"
+label: "Redshift Test Model"
 # include all the views
 include: "*.view"
 
