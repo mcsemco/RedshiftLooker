@@ -67,8 +67,10 @@
       num_rows: '10'
     label_rotation: -90
     listen:
-
+      Date Range: fact_tb_dtp_req_line_1.request_date
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
+      Status: dim_status.status
+      HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
     row: 0
     col: 0
     width: 9
@@ -131,8 +133,10 @@
       num_rows: '10'
     label_rotation: -90
     listen:
-
+      Date Range: fact_tb_dtp_req_line_1.request_date
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
+      Status: dim_status.status
+      HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
     row: 0
     col: 9
     width: 10
@@ -144,7 +148,7 @@
     explore: fact_tb_dtp_req_line_1
     type: looker_column
     fields:
-    - date.yearmo
+    - fact_tb_dtp_req_line_1.request_date
     - fact_tb_dtp_req_line_1.count_products
     - dim_status.status
     pivots:
@@ -202,8 +206,10 @@
     hidden_fields: []
     x_axis_datetime_label: "%Y-%m"
     listen:
-
+      Date Range: fact_tb_dtp_req_line_1.request_date
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
+      Status: dim_status.status
+      HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
     row: 17
     col: 0
     width: 10
@@ -274,8 +280,10 @@
     x_axis_datetime_label: "%Y-%m"
     hidden_series: []
     listen:
-
+      Date Range: fact_tb_dtp_req_line_1.request_date
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
+      Status: dim_status.status
+      HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
     row: 17
     col: 10
     width: 9
@@ -321,8 +329,10 @@
     single_value_title: Count of Transactions
     value_format: ''
     listen:
-
+      Date Range: fact_tb_dtp_req_line_1.request_date
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
+      Status: dim_status.status
+      HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
     row: 7
     col: 0
     width: 3
@@ -370,8 +380,10 @@
     single_value_title: Ordered Quantity
     value_format: ''
     listen:
-
+      Date Range: fact_tb_dtp_req_line_1.request_date
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
+      Status: dim_status.status
+      HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
     row: 12
     col: 0
     width: 3
@@ -466,8 +478,10 @@
       strikethrough: false
       fields:
     listen:
-
+      Date Range: fact_tb_dtp_req_line_1.request_date
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
+      Status: dim_status.status
+      HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
     title_hidden: true
     row: 24
     col: 0

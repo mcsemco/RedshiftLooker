@@ -196,7 +196,7 @@
     explore: fact_tb_dtp_req_line_1
     type: looker_column
     fields:
-    - date.yearmo
+    - fact_tb_dtp_req_line_1.request_date
     - fact_tb_dtp_req_line_1.count_products
     - dim_status.status
     pivots:
@@ -254,9 +254,9 @@
     hidden_fields: []
     x_axis_datetime_label: ''
     listen:
-
+      Date Range: fact_tb_dtp_req_line_1.request_date
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
-
+      Status: dim_status.status
       HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
     row: 7
     col: 8
