@@ -205,7 +205,8 @@ view: fact_tb_dtp_req_line_1 {
       week,
       month,
       quarter,
-      year
+      year,
+      fiscal_month_num
     ]
     convert_tz: no
     datatype: date
