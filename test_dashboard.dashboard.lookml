@@ -198,6 +198,57 @@
     col: 0
     width: 3
     height: 5
+  - title: Ordered Quantity
+    name: Ordered Quantity
+    model: redshiftproject
+    explore: fact_tb_dtp_req_line_1
+    type: single_value
+    fields:
+    - fact_tb_dtp_req_line_1.qty_ordered
+    sorts:
+    - fact_tb_dtp_req_line_1.qty_orded desc
+    limit: 500
+    custom_color_enabled: false
+    custom_color: forestgreen
+    show_single_value_title: true
+    show_comparison: false
+    comparison_type: value
+    comparison_reverse_colors: false
+    show_comparison_label: true
+    stacking: ''
+    show_value_labels: false
+    label_density: 25
+    legend_position: center
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: true
+    limit_displayed_rows: false
+    y_axis_combined: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    x_axis_scale: auto
+    y_axis_scale_mode: linear
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    series_types: {}
+    single_value_title: Ordered Quantity
+    value_format: ''
+    listen:
+      Date Range: fact_tb_dtp_req_line_1.request_date
+      MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
+      Status: dim_status.status
+      HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
+    row: 12
+    col: 0
+    width: 3
+    height: 5
   - name: Map_Us_Count_of Trx
     title: Map_Us_Count_of Trx
     model: redshiftproject
@@ -294,59 +345,8 @@
     col: 3
     width: 16
     height: 10
-  - title: Ordered Quantity
-    name: Ordered Quantity
-    model: redshiftproject
-    explore: fact_tb_dtp_req_line_1
-    type: single_value
-    fields:
-    - fact_tb_dtp_req_line_1.qty_ordered
-    sorts:
-    - fact_tb_dtp_req_line_1.qty_orded desc
-    limit: 500
-    custom_color_enabled: false
-    custom_color: forestgreen
-    show_single_value_title: true
-    show_comparison: false
-    comparison_type: value
-    comparison_reverse_colors: false
-    show_comparison_label: true
-    stacking: ''
-    show_value_labels: false
-    label_density: 25
-    legend_position: center
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: true
-    limit_displayed_rows: false
-    y_axis_combined: true
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    x_axis_scale: auto
-    y_axis_scale_mode: linear
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: false
-    show_silhouette: false
-    totals_color: "#808080"
-    series_types: {}
-    single_value_title: Ordered Quantity
-    value_format: ''
-    listen:
-      Date Range: fact_tb_dtp_req_line_1.request_date
-      MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
-      Status: dim_status.status
-      HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
-    row: 12
-    col: 0
-    width: 3
-    height: 5
-  - title: Table2
-    name: Table2
+  - name: Table
+    title: Table
     model: redshiftproject
     explore: fact_tb_dtp_req_line_1
     type: table
@@ -410,15 +410,11 @@
       - id: fact_tb_dtp_req_line_1.count_transactions
         name: Fact Tb Dtp Req Line 1 Count Transactions
         axisId: fact_tb_dtp_req_line_1.count_transactions
-        __FILE: redshiftproject/test_dashboard.dashboard.lookml
-        __LINE_NUM: 453
-      __FILE: redshiftproject/test_dashboard.dashboard.lookml
-      __LINE_NUM: 441
     font_size: 9px
     limit_displayed_rows_values:
       show_hide: show
       first_last: first
-      num_rows: '10'
+      num_rows: '500'
     label_rotation: -90
     hidden_fields: []
     x_axis_datetime_label: ''
@@ -434,21 +430,16 @@
         - "#F36254"
         - "#FCF758"
         - "#4FBC89"
-        __FILE: redshiftproject/test_dashboard.dashboard.lookml
-        __LINE_NUM: 471
       bold: false
       italic: false
       strikethrough: false
       fields:
-      __FILE: redshiftproject/test_dashboard.dashboard.lookml
-      __LINE_NUM: 466
     listen:
       Date Range: fact_tb_dtp_req_line_1.request_date
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
       Status: dim_status.status
       HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
-    title_hidden: true
-    row: 24
+    row: 30
     col: 0
     width: 19
     height: 6
