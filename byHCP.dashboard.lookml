@@ -401,8 +401,8 @@
     col: 9
     width: 10
     height: 7
-  - title: Table
-    name: Table
+  - name: Table
+    title: Table
     model: redshiftproject
     explore: fact_tb_dtp_req_line_1
     type: table
@@ -466,15 +466,11 @@
       - id: fact_tb_dtp_req_line_1.count_transactions
         name: Fact Tb Dtp Req Line 1 Count Transactions
         axisId: fact_tb_dtp_req_line_1.count_transactions
-        __FILE: redshiftproject/byHCP.dashboard.lookml
-        __LINE_NUM: 327
-      __FILE: redshiftproject/byHCP.dashboard.lookml
-      __LINE_NUM: 315
     font_size: 9px
     limit_displayed_rows_values:
       show_hide: show
       first_last: first
-      num_rows: '10'
+      num_rows: '500'
     label_rotation: -90
     hidden_fields: []
     x_axis_datetime_label: ''
@@ -490,21 +486,16 @@
         - "#F36254"
         - "#FCF758"
         - "#4FBC89"
-        __FILE: redshiftproject/byHCP.dashboard.lookml
-        __LINE_NUM: 345
       bold: false
       italic: false
       strikethrough: false
       fields:
-      __FILE: redshiftproject/byHCP.dashboard.lookml
-      __LINE_NUM: 340
     listen:
       Date Range: fact_tb_dtp_req_line_1.request_date
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
       Status: dim_status.status
       HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
-    title_hidden: true
-    row: 14
+    row: 20
     col: 0
     width: 19
     height: 6
