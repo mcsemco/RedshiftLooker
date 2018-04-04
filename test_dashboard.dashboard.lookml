@@ -537,6 +537,16 @@
     height: 6
 
   filters:
+  - name: Date Range
+    title: Date Range
+    type: field_filter
+    default_value: 2018/01/01 to 2018/04/04
+    allow_multiple_values: true
+    required: false
+    model: redshiftproject
+    explore: fact_tb_dtp_req_line_1
+    listens_to_filters: [MSTR Client,Status,HCP Full Name]
+    field: fact_tb_dtp_req_line_1.request_date
   - name: MSTR Client
     title: MSTR Client
     type: field_filter
@@ -545,5 +555,25 @@
     required: false
     model: redshiftproject
     explore: fact_tb_dtp_req_line_1
-    listens_to_filters: []
+    listens_to_filters: [Date Range,Status,HCP Full Name]
     field: fact_tb_dtp_req_line_1.mstr_client_id
+  - name: Status
+    title: Status
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    model: redshiftproject
+    explore: fact_tb_dtp_req_line_1
+    listens_to_filters: [Date Range,MSTR Client,HCP Full Name]
+    field: dim_status.status
+  - name: HCP Full Name
+    title: HCP Full Name
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    model: redshiftproject
+    explore: fact_tb_dtp_req_line_1
+    listens_to_filters: [Date Range,MSTR Client,Status]
+    field: fact_tb_dtp_req_line_1.hcp_full_name
