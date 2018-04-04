@@ -70,8 +70,8 @@
 
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
     row: 0
-    col: 3
-    width: 8
+    col: 0
+    width: 9
     height: 7
   - title: Count of Transactions by Order Source
     name: Count of Transactions by Order Source
@@ -134,72 +134,10 @@
 
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
     row: 0
-    col: 11
-    width: 8
+    col: 9
+    width: 10
     height: 7
-  - title: Count of Transactions by HCP State
-    name: Count of Transactions by HCP State
-    model: redshiftproject
-    explore: fact_tb_dtp_req_line_1
-    type: looker_column
-    fields:
-    - fact_tb_dtp_req_line_1.hcp_state
-    - fact_tb_dtp_req_line_1.count_transactions
-    sorts:
-    - fact_tb_dtp_req_line_1.hcp_state
-    limit: 500
-    stacking: ''
-    show_value_labels: false
-    label_density: 22
-    legend_position: center
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: false
-    limit_displayed_rows: false
-    y_axis_combined: true
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    x_axis_scale: auto
-    y_axis_scale_mode: linear
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: false
-    show_silhouette: false
-    totals_color: "#808080"
-    series_types: {}
-    y_axes:
-    - label: ''
-      maxValue:
-      minValue:
-      orientation: left
-      showLabels: false
-      showValues: true
-      tickDensity: default
-      tickDensityCustom: 5
-      type: linear
-      unpinAxis: false
-      valueFormat:
-      series:
-      - id: fact_tb_dtp_req_line_1.count
-        name: Fact Tb Dtp Req Line 1
-        axisId: fact_tb_dtp_req_line_1.count
-    reference_lines: []
-    y_axis_reversed: false
-    limit_displayed_rows_values:
-      show_hide: hide
-      first_last: first
-      num_rows: 0
-    listen:
 
-      MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
-    row: 7
-    col: 0
-    width: 19
-    height: 6
   - name: Count of Products by Year-Month and Status
     title: Count of Products by Year-Month and Status
     model: redshiftproject
@@ -266,7 +204,7 @@
     listen:
 
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
-    row: 13
+    row: 17
     col: 0
     width: 10
     height: 7
@@ -338,7 +276,7 @@
     listen:
 
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
-    row: 13
+    row: 17
     col: 10
     width: 9
     height: 7
@@ -385,10 +323,10 @@
     listen:
 
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
-    row: 0
+    row: 7
     col: 0
     width: 3
-    height: 4
+    height: 5
   - name: Ordered Quantity
     title: Ordered Quantity
     model: redshiftproject
@@ -434,10 +372,10 @@
     listen:
 
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
-    row: 4
+    row: 12
     col: 0
     width: 3
-    height: 3
+    height: 5
   - name: Table2
     title: Table2
     model: redshiftproject
@@ -531,11 +469,102 @@
 
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
     title_hidden: true
-    row: 20
+    row: 24
     col: 0
     width: 19
     height: 6
-
+  - name: Map_Us_Count_of Trx
+    title: Map_Us_Count_of Trx
+    model: redshiftproject
+    explore: fact_tb_dtp_req_line_1
+    type: looker_geo_choropleth
+    fields:
+    - fact_tb_dtp_req_line_1.count_transactions
+    - fact_tb_dtp_req_line_1.hcp_state_map
+    filters:
+      fact_tb_dtp_req_line_1.request_date: 2017/11/26 to 2018/04/04
+      fact_tb_dtp_req_line_1.mstr_client_id: NOVON
+      dim_status.status: ''
+      fact_tb_dtp_req_line_1.hcp_full_name: ''
+    sorts:
+    - fact_tb_dtp_req_line_1.count_transactions desc
+    limit: 500
+    column_limit: 50
+    map: usa
+    map_projection: mercator
+    show_view_names: true
+    quantize_colors: false
+    map_plot_mode: points
+    heatmap_gridlines: true
+    heatmap_gridlines_empty: true
+    heatmap_opacity: 0.5
+    show_region_field: true
+    draw_map_labels_above_data: true
+    map_tile_provider: positron
+    map_position: custom
+    map_scale_indicator: imperial
+    map_pannable: true
+    map_zoomable: true
+    map_marker_type: circle
+    map_marker_icon_name: default
+    map_marker_radius_mode: proportional_value
+    map_marker_units: meters
+    map_marker_proportional_scale_type: linear
+    map_marker_color_mode: fixed
+    show_legend: true
+    quantize_map_value_colors: false
+    reverse_map_value_colors: true
+    stacking: ''
+    show_value_labels: false
+    label_density: 22
+    legend_position: center
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    limit_displayed_rows: false
+    y_axis_combined: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    x_axis_scale: auto
+    y_axis_scale_mode: linear
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    series_types: {}
+    y_axes:
+    - label: ''
+      maxValue:
+      minValue:
+      orientation: left
+      showLabels: false
+      showValues: true
+      tickDensity: default
+      tickDensityCustom: 5
+      type: linear
+      unpinAxis: false
+      valueFormat:
+      series:
+      - id: fact_tb_dtp_req_line_1.count
+        name: Fact Tb Dtp Req Line 1
+        axisId: fact_tb_dtp_req_line_1.count
+    reference_lines: []
+    y_axis_reversed: false
+    limit_displayed_rows_values:
+      show_hide: hide
+      first_last: first
+      num_rows: 0
+    map_latitude: 49.55372551347579
+    map_longitude: -114.56542968750001
+    map_zoom: 3.5
+    row: 7
+    col: 3
+    width: 16
+    height: 10
   filters:
   - name: Date Range
     title: Date Range

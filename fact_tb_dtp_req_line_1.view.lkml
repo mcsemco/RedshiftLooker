@@ -136,6 +136,11 @@ view: fact_tb_dtp_req_line_1 {
     sql: ${TABLE}.hcp_state ;;
   }
 
+  dimension: hcp_state_map {
+    map_layer_name: us_states
+    sql: ${TABLE}.hcp_state;;
+  }
+
   dimension: hcp_street1 {
     type: string
     sql: ${TABLE}.hcp_street1 ;;
