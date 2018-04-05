@@ -9,6 +9,97 @@
     tile_text_color: "#3a4245"
     text_tile_text_color: ''
   elements:
+  - name: Count of Transactions by Projects
+    title: Count of Transactions by Projects
+    model: redshiftproject
+    explore: fact_tb_dtp_req_line_1
+    type: looker_column
+    fields:
+    - dim_project.proj_desc
+    - fact_tb_dtp_req_line_1.count_transactions
+    filters:
+      fact_tb_dtp_req_line_1.mstr_client_id: ''
+      dim_status.status: ''
+      fact_tb_dtp_req_line_1.hcp_full_name: ''
+    sorts:
+    - fact_tb_dtp_req_line_1.count_transactions desc
+    limit: 500
+    column_limit: 50
+    stacking: ''
+    show_value_labels: true
+    label_density: 24
+    legend_position: center
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: true
+    limit_displayed_rows: true
+    y_axis_combined: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    x_axis_scale: auto
+    y_axis_scale_mode: linear
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    series_types: {}
+    x_axis_label: Project
+    y_axes:
+    - label: ''
+      maxValue:
+      minValue:
+      orientation: left
+      showLabels: false
+      showValues: true
+      tickDensity: default
+      tickDensityCustom: 5
+      type: linear
+      unpinAxis: false
+      valueFormat: ''
+      series:
+      - id: fact_tb_dtp_req_line_1.count_transactions
+        name: Fact Tb Dtp Req Line 1 Count Transactions
+        axisId: fact_tb_dtp_req_line_1.count_transactions
+        __FILE: redshiftproject/test_dashboard.dashboard.lookml
+        __LINE_NUM: 60
+      __FILE: redshiftproject/test_dashboard.dashboard.lookml
+      __LINE_NUM: 48
+    font_size: 9px
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '20'
+    label_rotation: -90
+    colors:
+    - "#62bad4"
+    - "#a9c574"
+    - "#929292"
+    - "#9fdee0"
+    - "#1f3e5a"
+    - "#90c8ae"
+    - "#92818d"
+    - "#c5c6a6"
+    - "#82c2ca"
+    - "#cee0a0"
+    - "#928fb4"
+    - "#9fc190"
+    series_colors: {}
+    series_labels:
+      fact_tb_dtp_req_line_1.count_transactions: Count of Transactions
+    listen:
+      Date Range: fact_tb_dtp_req_line_1.request_date
+      MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
+      Status: dim_status.status
+      HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
+    row: 0
+    col: 3
+    width: 8
+    height: 7
   - title: Count of Transactions
     name: Count of Transactions
     model: redshiftproject
@@ -58,146 +149,6 @@
     col: 0
     width: 3
     height: 4
-  - title: Count of Transactions by Projects
-    name: Count of Transactions by Projects
-    model: redshiftproject
-    explore: fact_tb_dtp_req_line_1
-    type: looker_column
-    fields:
-    - dim_project.proj_desc
-    - fact_tb_dtp_req_line_1.count_transactions
-    sorts:
-    - fact_tb_dtp_req_line_1.count_transactions desc
-    limit: 500
-    stacking: ''
-    show_value_labels: true
-    label_density: 25
-    legend_position: center
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: true
-    limit_displayed_rows: true
-    y_axis_combined: true
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    x_axis_scale: auto
-    y_axis_scale_mode: linear
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: false
-    show_silhouette: false
-    totals_color: "#808080"
-    series_types: {}
-    x_axis_label: Projects
-    y_axes:
-    - label: ''
-      maxValue:
-      minValue:
-      orientation: left
-      showLabels: false
-      showValues: true
-      tickDensity: default
-      tickDensityCustom: 5
-      type: linear
-      unpinAxis: false
-      valueFormat: ''
-      series:
-      - id: fact_tb_dtp_req_line_1.count_transactions
-        name: Fact Tb Dtp Req Line 1 Count Transactions
-        axisId: fact_tb_dtp_req_line_1.count_transactions
-        __FILE: redshiftproject/byHCP.dashboard.lookml
-        __LINE_NUM: 126
-      __FILE: redshiftproject/byHCP.dashboard.lookml
-      __LINE_NUM: 114
-    font_size: 9px
-    limit_displayed_rows_values:
-      show_hide: show
-      first_last: first
-      num_rows: '10'
-    label_rotation: -90
-    listen:
-      Date Range: fact_tb_dtp_req_line_1.request_date
-      MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
-      Status: dim_status.status
-      HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
-    row: 0
-    col: 3
-    width: 8
-    height: 7
-  - title: Count of Transactions by Order Source
-    name: Count of Transactions by Order Source
-    model: redshiftproject
-    explore: fact_tb_dtp_req_line_1
-    type: looker_column
-    fields:
-    - fact_tb_dtp_req_line_1.count_transactions
-    - fact_tb_dtp_req_line_1.order_source
-    sorts:
-    - fact_tb_dtp_req_line_1.count_transactions desc
-    limit: 500
-    stacking: ''
-    show_value_labels: true
-    label_density: 25
-    legend_position: center
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: true
-    limit_displayed_rows: true
-    y_axis_combined: true
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    x_axis_scale: auto
-    y_axis_scale_mode: linear
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: false
-    show_silhouette: false
-    totals_color: "#808080"
-    series_types: {}
-    x_axis_label: Projects
-    y_axes:
-    - label: ''
-      maxValue:
-      minValue:
-      orientation: left
-      showLabels: false
-      showValues: true
-      tickDensity: default
-      tickDensityCustom: 5
-      type: linear
-      unpinAxis: false
-      valueFormat: ''
-      series:
-      - id: fact_tb_dtp_req_line_1.count_transactions
-        name: Fact Tb Dtp Req Line 1 Count Transactions
-        axisId: fact_tb_dtp_req_line_1.count_transactions
-        __FILE: redshiftproject/byHCP.dashboard.lookml
-        __LINE_NUM: 60
-      __FILE: redshiftproject/byHCP.dashboard.lookml
-      __LINE_NUM: 48
-    font_size: 9px
-    limit_displayed_rows_values:
-      show_hide: show
-      first_last: first
-      num_rows: '10'
-    label_rotation: -90
-    listen:
-      Date Range: fact_tb_dtp_req_line_1.request_date
-      MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
-      Status: dim_status.status
-      HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
-    row: 0
-    col: 11
-    width: 8
-    height: 7
   - title: Count of Transactions by Rep Full Name
     name: Count of Transactions by Rep Full Name
     model: redshiftproject
@@ -397,7 +348,7 @@
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
       Status: dim_status.status
       HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
-    row: 7
+    row: 14
     col: 9
     width: 10
     height: 7
@@ -495,10 +446,87 @@
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
       Status: dim_status.status
       HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
-    row: 20
+    row: 21
     col: 0
     width: 19
     height: 6
+  - name: Count of Transactions by Order Source
+    title: Count of Transactions by Order Source
+    model: redshiftproject
+    explore: fact_tb_dtp_req_line_1
+    type: looker_column
+    fields:
+    - fact_tb_dtp_req_line_1.count_transactions
+    - fact_tb_dtp_req_line_1.order_source
+    filters:
+      fact_tb_dtp_req_line_1.mstr_client_id: ''
+      dim_status.status: ''
+      fact_tb_dtp_req_line_1.hcp_full_name: ''
+    sorts:
+    - fact_tb_dtp_req_line_1.count_transactions desc
+    limit: 500
+    column_limit: 50
+    stacking: ''
+    show_value_labels: true
+    label_density: 25
+    legend_position: center
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: true
+    limit_displayed_rows: true
+    y_axis_combined: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    x_axis_scale: auto
+    y_axis_scale_mode: linear
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    series_types: {}
+    x_axis_label: Order Source
+    y_axes:
+    - label: ''
+      maxValue:
+      minValue:
+      orientation: left
+      showLabels: false
+      showValues: true
+      tickDensity: default
+      tickDensityCustom: 5
+      type: linear
+      unpinAxis: false
+      valueFormat: ''
+      series:
+      - id: fact_tb_dtp_req_line_1.count_transactions
+        name: Fact Tb Dtp Req Line 1 Count Transactions
+        axisId: fact_tb_dtp_req_line_1.count_transactions
+        __FILE: redshiftproject/test_dashboard.dashboard.lookml
+        __LINE_NUM: 126
+      __FILE: redshiftproject/test_dashboard.dashboard.lookml
+      __LINE_NUM: 114
+    font_size: 9px
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '20'
+    label_rotation: -90
+    series_labels:
+      fact_tb_dtp_req_line_1.count_transactions: Count of Transactions
+    listen:
+      Date Range: fact_tb_dtp_req_line_1.request_date
+      MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
+      Status: dim_status.status
+      HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
+    row: 0
+    col: 11
+    width: 8
+    height: 7
   filters:
   - name: Date Range
     title: Date Range
