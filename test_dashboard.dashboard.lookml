@@ -96,7 +96,7 @@
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
       Status: dim_status.status
       HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
-    row: 0
+    row: 10
     col: 0
     width: 9
     height: 7
@@ -147,7 +147,7 @@
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
       Status: dim_status.status
       HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
-    row: 7
+    row: 0
     col: 0
     width: 3
     height: 5
@@ -196,7 +196,7 @@
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
       Status: dim_status.status
       HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
-    row: 12
+    row: 5
     col: 0
     width: 3
     height: 5
@@ -277,12 +277,12 @@
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
       Status: dim_status.status
       HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
-    row: 24
+    row: 17
     col: 0
     width: 10
     height: 7
-  - name: Map_Us_Count_of Trx
-    title: Map_Us_Count_of Trx
+  - name: Map USA
+    title: Map USA
     model: redshiftproject
     explore: fact_tb_dtp_req_line_1
     type: looker_geo_choropleth
@@ -373,7 +373,7 @@
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
       Status: dim_status.status
       HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
-    row: 14
+    row: 0
     col: 3
     width: 16
     height: 10
@@ -455,7 +455,7 @@
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
       Status: dim_status.status
       HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
-    row: 24
+    row: 17
     col: 10
     width: 9
     height: 7
@@ -553,7 +553,7 @@
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
       Status: dim_status.status
       HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
-    row: 31
+    row: 24
     col: 0
     width: 19
     height: 6
@@ -630,7 +630,7 @@
       MSTR Client: fact_tb_dtp_req_line_1.mstr_client_id
       Status: dim_status.status
       HCP Full Name: fact_tb_dtp_req_line_1.hcp_full_name
-    row: 0
+    row: 10
     col: 9
     width: 10
     height: 7
