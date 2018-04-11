@@ -14,6 +14,10 @@ datagroup: redshiftproject_default_datagroup {
 persist_with: redshiftproject_default_datagroup
 
 explore: fact_tb_dtp_req_line_1 {
+  access_filter: {
+    field: mstr_client_id
+    user_attribute: mstr_client
+  }
   description: "Facts for qpharma dashboard"
   label: "Facts for qpharma dashboard"
   join: date {
