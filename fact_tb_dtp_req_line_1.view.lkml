@@ -168,11 +168,6 @@ view: fact_tb_dtp_req_line_1 {
       url: "/dashboards/5?MSTR%20Client={{ value }}"
       icon_url: "https://www.google.com/s2/favicons?domain=www.looker.com"
     }
-    link: {
-      label: "View by HCP1"
-      url: "/dashboards/5?MSTR%20Client={{ value }}"
-      icon_url: "https://www.google.com/s2/favicons?domain=www.looker.com"
-    }
     sql: ${TABLE}.mstr_client_id ;;
   }
 
